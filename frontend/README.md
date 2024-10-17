@@ -7,7 +7,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 | Command           | What it does                                       |
 |-------------------|----------------------------------------------------|
-| `npm install`     | Run first time, and anytime `package.json` changes |
+| `npm ci`     | Run first time in install dependencies |
+| `npm install`     | Run only when package.json changes |
 | `npm start`       | Start application on `http://localhost:3000`       |
 | `npm test`        | Run tests                                          |
 | `npm run build`   | Build production ready app in `build` folder       |
