@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  * boilerplate needed to create an integration test.
  * 
  * It is recommended to NOT included this in any project other than
- * jpa03, where it serves as a teaching example.
+ * jpa04, where it serves as a teaching example.
  * 
  * It can also be used to test whether the maven tooling for integration
  * tests is working, independent of other code.

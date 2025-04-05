@@ -109,7 +109,7 @@ On the dokku server command line, type:<br />
 
 <tt>dokku config:set --no-restart <b></i>app-name VARIABLE=VALUE</i></b></tt>, where
 
-* <b></i>app-name</i></b> is your app name such as `jpa03-cgaucho`.  It needs to match what you see when you type `dokku apps:list`
+* <b></i>app-name</i></b> is your app name such as `jpa04-cgaucho`.  It needs to match what you see when you type `dokku apps:list`
 * <b></i>VARIABLE=VALUE</i></b> is one of the lines in your .env. file
 
 Note that on Dokku, you also typically need to set this
@@ -131,38 +131,38 @@ You could use file transfer, but because of various firewall settings, it may be
    use `cat .env` to list out the contents, e.g.
 
    ```
-   pconrad@Phillips-MacBook-Air STARTER-jpa03 % cat .env
+   pconrad@Phillips-MacBook-Air STARTER-jpa04 % cat .env
    GOOGLE_CLIENT_ID=26622685272-ofq4729s9nt8loednuuv5c0opja1vaeb.apps.googleusercontent.com
    GOOGLE_CLIENT_SECRET=GOCSPX-fakeCredentials99_fakefake-_fake
    ADMIN_EMAILS=phtcon@ucsb.edu
 
-   JDBC_DATABASE_URL=jdbc:postgresql://example.org:5432/starter_jpa03_db
+   JDBC_DATABASE_URL=jdbc:postgresql://example.org:5432/starter_jpa04_db
    JDBC_DATABASE_USERNAME=postgres
    JDBC_DATABASE_PASSWORD=password
-   pconrad@Phillips-MacBook-Air STARTER-jpa03 % 
+   pconrad@Phillips-MacBook-Air STARTER-jpa04 % 
    ```
 
-2. At the shell prompt on your dokku server (e.g. dokku-07.cs.ucsb.edu), type this, where `jpa03-cgaucho` is the name of your
+2. At the shell prompt on your dokku server (e.g. dokku-07.cs.ucsb.edu), type this, where `jpa04-cgaucho` is the name of your
 app:
 
    ```
-   cat > jpa03-gaucho.env
+   cat > jpa04-gaucho.env
    ```
 
    Then, copy paste the contents of the `.env` file into the window, followed by hitting enter, and then Control-D.
 
    If you then do an `ls` you should see that you have
-   a file called `jpa03-gaucho.env` containing the values
+   a file called `jpa04-gaucho.env` containing the values
    you want to set.
 
-3. Now type the following (assuming that `jpa03-cgaucho` is
+3. Now type the following (assuming that `jpa04-cgaucho` is
    your Dokku app name).
 
    ```
-   dokku config:set --no-restart jpa03-cgaucho `cat jpa03-gaucho.env`
+   dokku config:set --no-restart jpa04-cgaucho `cat jpa04-gaucho.env`
    ```
 
-   In this command, the part in backticks (<tt>\`cat jpa03-gaucho.env\`</tt>) specfies that the output of that command should be placed on the command line.
+   In this command, the part in backticks (<tt>\`cat jpa04-gaucho.env\`</tt>) specfies that the output of that command should be placed on the command line.
 
    Accordingly, this sets all of the environment variables at once.
 
@@ -179,7 +179,7 @@ app:
 
    If you want to restart the application you can either
    * Leave off the `--no-restart` part, or
-   * Type `dokku ps:restart jpa03-cgaucho` as the next command
+   * Type `dokku ps:restart jpa04-cgaucho` as the next command
    
 For troubleshooting advice with OAuth, this page may help:
 
