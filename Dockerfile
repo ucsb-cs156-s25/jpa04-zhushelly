@@ -40,4 +40,5 @@ COPY . /home/app
 
 RUN mvn -B -Pproduction -DskipTests -f /home/app/pom.xml clean package
 
-ENTRYPOINT ["java","-jar","/home/app/target/example-1.1.0.jar"]
+RUN ["chmod", "+x", "/home/app/startup.sh"]
+ENTRYPOINT ["/home/app/startup.sh","/home/app/target/example-1.1.0.jar"]
